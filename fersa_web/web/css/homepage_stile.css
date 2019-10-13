@@ -1,0 +1,51 @@
+body{
+	background-color:#d2b48c;
+	color:#3e2f1d;
+
+	font-family: Verdana, Geneva, sans-serif;
+	font-weight: lighter;
+	text-align: center;
+	margin-top: 10px;
+}
+
+.Fersa{
+	text-align: left;
+	padding-left:25px;
+	padding-top:25px;
+	color:#3e2f1d;
+	font-family: "Savoye LET", serif;
+	font-weight: bold;
+	font-size: 105px;
+}
+
+a{
+	text-decoration: none;
+	color: #3e2f1d;
+}
+
+a:hover{
+	color: #7f5e3a;
+}
+
+a:active{
+	color: #7f5e3a;
+}
+
+.menu{
+	text-align:left;
+	float: left;
+}
+
+.menu li{
+	padding-top: 10px;
+	padding-bottom:15px;
+}
+
+.Title{
+	font-size: 30px;
+	margin-top:80px;
+}
+
+.Annuncio{
+
+}

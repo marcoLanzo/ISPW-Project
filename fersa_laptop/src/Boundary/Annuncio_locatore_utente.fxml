@@ -1,0 +1,542 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane minHeight="800.0" minWidth="1400.0" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #d2b48c #d2b48c;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Boundary.Annuncio_locatore">
+   <children>
+      <BorderPane minHeight="800.0" minWidth="1400.0" prefHeight="800.0" prefWidth="1400.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="627.0" prefWidth="230.0" spacing="35.0" style="-fx-background-color: #3e2f1d;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#displayRenterShowcase" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/annunci_locatori.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Annunci locatori" wrappingWidth="116.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="26.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="21.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#displayTenantShowcase" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/annunci_locatari.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Annunci locatari" wrappingWidth="121.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/mappa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Cerca tramite mappa" wrappingWidth="148.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/cerca.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Cerca tramite nome" wrappingWidth="148.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#inserisciAppartamento" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/aggiungi_appartamento.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci annuncio" wrappingWidth="147.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#inserisciRichiesta" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/aggiuni_richiesta.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci richiesta" wrappingWidth="147.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#displayFavorites" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/heart_copy.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Preferiti" wrappingWidth="147.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#showProfile" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/utente.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Profilo" wrappingWidth="147.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <opaqueInsets>
+            <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+         </opaqueInsets>
+         <top>
+            <HBox minWidth="1382.0" prefHeight="105.0" prefWidth="1382.0" spacing="40.0" style="-fx-background-color: #3e2f1d #3e2f1d;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#e1c8a9" layoutX="7.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fersa" wrappingWidth="179.19140625">
+                     <font>
+                        <Font name="Savoye LET Plain:1.0" size="76.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="50.0" right="100.0" top="15.0" />
+                     </HBox.margin>
+                  </Text>
+                  <ImageView fitHeight="62.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../res/smile.png" />
+                     </image>
+                     <HBox.margin>
+                        <Insets top="20.0" />
+                     </HBox.margin>
+                  </ImageView>
+                  <Text fx:id="textUtente" fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Benvenuto utente!" wrappingWidth="343.19647216796875" x="-30.0">
+                     <font>
+                        <Font name="Optima Regular" size="25.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="-10.0" right="-10.0" top="35.0" />
+                     </HBox.margin>
+                  </Text>
+               </children>
+            </HBox>
+         </top>
+         <center>
+            <AnchorPane prefHeight="724.0" prefWidth="1150.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="450.0" layoutY="88.0" minHeight="265.0" minWidth="650.0" prefHeight="544.0" prefWidth="650.0" style="-fx-background-color: #af9471;">
+                     <children>
+                        <Text fx:id="textDescription" fill="#1e170e" layoutY="3.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Commento inserito da locatore" textAlignment="CENTER" wrappingWidth="649.2474670410156" y="70.0">
+                           <font>
+                              <Font name="Optima Regular" size="14.0" />
+                           </font></Text>
+                        <Label alignment="CENTER" contentDisplay="CENTER" layoutY="15.0" minWidth="650.0" prefHeight="0.0" prefWidth="650.0" style="-fx-background-color: #967e63;" text="Riepilogo" textAlignment="CENTER">
+                           <font>
+                              <Font name="Optima Regular" size="20.0" />
+                           </font>
+                        </Label>
+                        <Group layoutY="277.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" layoutY="-51.0" minWidth="650.0" prefHeight="0.0" prefWidth="650.0" style="-fx-background-color: #967e63;" text="Specifiche" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Optima Regular" size="20.0" />
+                                 </font>
+                              </Label>
+                              <Text fx:id="textVasca" fill="#1e170e" layoutX="-3.0" layoutY="-302.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vasca" wrappingWidth="191.24746704101562" x="50.0" y="360.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageVasca" fitHeight="20.0" fitWidth="20.0" layoutX="21.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textDescription11" fill="#1e170e" layoutX="-3.0" layoutY="-300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Doccia" wrappingWidth="191.24746704101562" x="50.0" y="385.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageDoccia" fitHeight="20.0" fitWidth="20.0" layoutX="21.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textDescription12" fill="#1e170e" layoutX="-3.0" layoutY="-300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wi-fi" wrappingWidth="191.24746704101562" x="50.0" y="410.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageWifi" fitHeight="20.0" fitWidth="20.0" layoutX="21.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textDescription13" fill="#1e170e" layoutX="-3.0" layoutY="-300.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Termostato" wrappingWidth="191.24746704101562" x="50.0" y="435.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageTermostato" fitHeight="20.0" fitWidth="20.0" layoutX="21.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textDescription14" fill="#1e170e" layoutY="-301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Frigorifero" wrappingWidth="191.24746704101562" x="450.0" y="360.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageFrigorifero" fitHeight="20.0" fitWidth="20.0" layoutX="421.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textDescription111" fill="#1e170e" layoutY="-301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Macchina del gas" wrappingWidth="191.24746704101562" x="450.0" y="385.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageMacchinadelgas" fitHeight="20.0" fitWidth="20.0" layoutX="421.0" layoutY="70.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textDescription121" fill="#1e170e" layoutY="-301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Lavastoviglie" wrappingWidth="191.24746704101562" x="450.0" y="410.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageLavastoviglie" fitHeight="20.0" fitWidth="20.0" layoutX="421.0" layoutY="95.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textDescription131" fill="#1e170e" layoutY="-301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Misuratore consumo" wrappingWidth="191.24746704101562" x="450.0" y="435.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="14.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fx:id="imageMisuratoreconsumosingolaunita" fitHeight="20.0" fitWidth="20.0" layoutX="421.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/Check_mark.svg.png" />
+                                 </image>
+                              </ImageView>
+                              <Text fx:id="textAddress1" fill="#1e170e" layoutX="-41.0" layoutY="-377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero posti letto: " wrappingWidth="150.88014221191406" x="64.0" y="390.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="numeropostiletto" fill="#1e170e" layoutX="99.0" layoutY="-377.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="74.88014221191406" x="64.0" y="390.0">
+                                 <font>
+                                    <Font name="Optima Regular" size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text layoutX="421.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Numero Stanze:" wrappingWidth="124.908203125">
+                                 <font>
+                                    <Font size="16.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="numerostanze" layoutX="546.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="43.13671875">
+                                 <font>
+                                    <Font size="15.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </Group>
+                        <Text layoutX="14.0" layoutY="510.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Posizione:" wrappingWidth="118.13671875">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Hyperlink fx:id="maps" layoutX="94.0" layoutY="493.0" prefHeight="23.0" prefWidth="266.0" text="Hyperlink" textFill="#610e0e" />
+                        <Text layoutX="24.0" layoutY="451.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Riscaldamento:" wrappingWidth="129.13671875">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textriscaldamento" layoutX="137.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="66.13671875" />
+                        <Text layoutX="429.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Gas:" wrappingWidth="129.13671875">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textgas" layoutX="532.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="66.13671875" />
+                        <Text fx:id="textPrice" layoutX="112.0" layoutY="263.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Prezzo" x="265.0" y="260.0">
+                           <font>
+                              <Font name="Optima Regular" size="46.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="textprezzo" layoutX="542.0" layoutY="526.0" strokeType="OUTSIDE" strokeWidth="0.0" text="?" wrappingWidth="132.13671875">
+                           <font>
+                              <Font size="44.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="195.0" layoutY="450.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Riscaldamento:" wrappingWidth="129.13671875">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Pane layoutX="66.0" layoutY="88.0" minHeight="265.0" minWidth="384.0" prefHeight="265.0" prefWidth="384.0" style="-fx-background-color: #af9471;">
+                     <children>
+                        <ImageView fx:id="imageApt" fitHeight="168.0" fitWidth="180.0" layoutX="32.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true" x="71.0">
+                           <image>
+                              <Image url="@../res/annunci_locatori_copy.png" />
+                           </image>
+                        </ImageView>
+                        <Label layoutX="5.0" layoutY="218.0" text="Proprietario:" textFill="#1e170e">
+                           <font>
+                              <Font name="Optima Regular" size="20.0" />
+                           </font>
+                        </Label>
+                        <Text fx:id="textUser" fill="#cd1010" layoutX="108.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utente" wrappingWidth="161.6354522705078" x="20.0" y="70.0">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                     </children>
+                  </Pane>
+                  <Button layoutX="1100.0" layoutY="23.0" minWidth="31.0" mnemonicParsing="false" onAction="#insertFavorites" prefHeight="25.0" prefWidth="31.0" style="-fx-background-color: #d2b48c;" text=" ">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/heart.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Text fx:id="textAnnounceName" fill="#1e170e" layoutX="67.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome annuncio" textAlignment="CENTER" underline="true" wrappingWidth="1029.7694549560547" y="30.0">
+                     <font>
+                        <Font name="Optima Regular" size="35.0" />
+                     </font>
+                  </Text>
+                  <Group fx:id="stellinegroup" layoutX="340.0" layoutY="360.0">
+                     <children>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="84.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Group>
+                  <Button layoutX="22.0" layoutY="629.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#contattaLocatore" prefWidth="105.0" style="-fx-background-color: #3e2f1d;" text="Contatta" textFill="#ffd6a3" />
+                  <Button layoutX="183.0" layoutY="629.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#signal" prefWidth="105.0" style="-fx-background-color: #78534d;" text="Segnala" textFill="WHITE" />
+                  <Text fx:id="textAddress" fill="#1e170e" layoutX="-36.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Indirizzo" wrappingWidth="68.88014221191406" x="64.0" y="390.0">
+                     <font>
+                        <Font name="Optima Regular" size="16.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="dataprenotazione" layoutX="28.0" layoutY="482.0" prefHeight="13.0" prefWidth="174.0" />
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="22.0" layoutY="302.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: multiply;">
+                     <image>
+                        <Image url="@../res/utente.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="textcity" layoutX="29.0" layoutY="405.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Citta" wrappingWidth="75.13671875">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="rimuoviButton" layoutX="340.0" layoutY="629.0" minHeight="35.0" minWidth="105.0" mnemonicParsing="false" onAction="#rimuoviAnnuncio" prefWidth="105.0" style="-fx-background-color: #78534d;" text="Rimuovi" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

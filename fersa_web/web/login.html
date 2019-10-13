@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link href="css/login_stile.css" rel="stylesheet">
+
+</head>
+<body>
+
+    <div class="Fersa"> Fersa </div>
+    <br>
+    <br>
+    <br>
+    <div class="Title"> Login </div>
+    <br>
+    <br>
+
+    <!--action per specificare la pagina che processerà i dati, name per identificare il form, method POST i dati vengono inviati in 2 step-->
+    <form action="Login.jsp" name="myform" method="POST">
+
+
+        <div class="form-group">
+            <!--mi collego la label all'elemento con l'id corrispondente al for-->
+            <!--usare id come identificatore nel browser, mentre name come identificatore per il server quando invii il form -->
+            <label for=nickname> Nome*</label>
+            <input type="text" class="form-control" id="nickname" name="nickname" placeholder="Nickname" />
+
+            <br>
+
+            <label for=password> Password*</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="inserisci la tua password" />
+
+            <br>
+
+        </div>
+        <br>
+        <br>
+        <!--valore del bottone in value, name per identificare i dati del form dopo la submit-->
+        <input type="submit" class="btn btn-alarm" name="login" value="Accedi" id="loginBtn">
+    </form>
+</body>
+</html>

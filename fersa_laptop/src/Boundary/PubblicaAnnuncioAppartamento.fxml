@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="309.0" minWidth="415.0" prefHeight="324.0" prefWidth="425.0" style="-fx-background-color: #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Boundary.PubblicaAnnuncioAppartamento">
+    <children>
+        <Separator layoutY="56.0" prefHeight="3.0" prefWidth="415.0" />
+        <Text fill="#86634f" layoutX="23.0" layoutY="43.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pubblica un annuncio" underline="true">
+            <font>
+                <Font name="Savoye LET Plain:1.0" size="40.0" />
+            </font></Text>
+        <Button fx:id="closeButton" layoutX="24.0" layoutY="269.0" mnemonicParsing="false" onAction="#chiudi" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: black;" text="INDIETRO" textFill="#68563e" />
+        <Button fx:id="confermaButton" layoutX="290.0" layoutY="269.0" mnemonicParsing="false" onAction="#conferma" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: black;" text="CONFERMA" textFill="#68563e" />
+        <Separator layoutX="1.0" layoutY="256.0" prefHeight="1.0" prefWidth="415.0" />
+        <Label layoutX="115.0" layoutY="132.0" text="Appartamento o stanza inseriti (*)">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></Label>
+      <ComboBox fx:id="SelezionaImmobile" layoutX="116.0" layoutY="154.0" prefHeight="27.0" prefWidth="182.0" />
+      <Label layoutX="191.0" layoutY="192.0" text="Prezzo (*)">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="announcePrice" layoutX="118.0" layoutY="213.0" prefHeight="27.0" prefWidth="182.0" promptText="Esempio: 500€" />
+      <Label layoutX="166.0" layoutY="73.0" text="Nome annuncio (*)">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="announceName" layoutX="115.0" layoutY="95.0" prefHeight="27.0" prefWidth="182.0" promptText="Esempio: Immobile a Roma" />
+    </children>
+</AnchorPane>

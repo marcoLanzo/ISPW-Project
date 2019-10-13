@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="stanzaPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="656.0" minWidth="415.0" prefHeight="496.0" prefWidth="415.0" style="-fx-background-color: #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Boundary.InserisciStanza">
+   <children>
+      <Separator layoutY="58.0" prefHeight="3.0" prefWidth="415.0" />
+      <Text fill="#86634f" layoutX="106.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci una stanza" underline="true">
+         <font>
+            <Font name="Savoye LET Plain:1.0" size="40.0" />
+         </font></Text>
+      <Label layoutX="50.0" layoutY="439.0" text="Gas (*)">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></Label>
+      <Label layoutX="50.0" layoutY="496.0" text="Riscaldamento (*)">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></Label>
+      <Button fx:id="closeButton" layoutX="23.0" layoutY="600.0" mnemonicParsing="false" onAction="#indietro" prefHeight="27.0" prefWidth="108.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: black;" text="INDIETRO" textFill="#68563e" />
+      <Button fx:id="nextButton" layoutX="285.0" layoutY="600.0" mnemonicParsing="false" onAction="#inserisciStanzaAppartamento" prefHeight="29.0" prefWidth="108.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: black;" text="AVANTI" textAlignment="CENTER" textFill="#68563e" />
+      <ComboBox fx:id="riscaldamentoComboBox" layoutX="176.0" layoutY="491.0" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: #68563e#68563e;" />
+      <ComboBox fx:id="gasComboBox" layoutX="176.0" layoutY="434.0" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: #68563e#68563e;" />
+      <Separator layoutX="1.0" layoutY="339.0" prefHeight="1.0" prefWidth="415.0" />
+      <Separator layoutY="79.0" prefHeight="1.0" prefWidth="415.0" />
+      <Label layoutX="132.0" layoutY="320.0" text="Informazioni Aggiuntive" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="137.0" layoutY="61.0" text="Caratteristiche stanza" textAlignment="CENTER" underline="true">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Label>
+      <CheckBox fx:id="frigorifero" layoutX="235.0" layoutY="117.0" mnemonicParsing="false" text="Frigorigero">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="macchinaGas" layoutX="235.0" layoutY="157.0" mnemonicParsing="false" text="Macchina del gas">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="wifi" layoutX="50.0" layoutY="197.0" mnemonicParsing="false" text="WiFi">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="doccia" layoutX="50.0" layoutY="157.0" mnemonicParsing="false" text="Doccia">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="vasca" layoutX="50.0" layoutY="117.0" mnemonicParsing="false" prefWidth="82.0" text="Vasca">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="lavastoviglie" layoutX="235.0" layoutY="197.0" mnemonicParsing="false" text="Lavastoviglie">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="termostato" layoutX="50.0" layoutY="237.0" mnemonicParsing="false" text="Termostato">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <CheckBox fx:id="misuratore" layoutX="235.0" layoutY="237.0" mnemonicParsing="false" text="Misuratore Consumo">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></CheckBox>
+      <TextField fx:id="postiLettoInput" layoutX="176.0" layoutY="383.0" prefHeight="26.0" prefWidth="152.0" promptText="Esempio: 2" />
+      <Label layoutX="50.0" layoutY="388.0" text="N° posti letto (*)">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></Label>
+      <Separator layoutX="1.0" layoutY="317.0" prefHeight="1.0" prefWidth="415.0" />
+   </children>
+</AnchorPane>

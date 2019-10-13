@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="registerPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #d2b48c #d2b48c #d2b48c #d2b48c;" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Boundary.Registrazione">
+   <children>
+      <Text fill="#80654c" layoutX="223.0" layoutY="68.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrazione" textAlignment="CENTER">
+         <font>
+            <Font name="Savoye LET Plain:1.0" size="45.0" />
+         </font>
+      </Text>
+      <TextField fx:id="user" layoutX="215.0" layoutY="130.0" promptText="Username" />
+      <TextField fx:id="password" layoutX="215.0" layoutY="200.0" promptText="Password" />
+      <Button layoutX="401.0" layoutY="300.0" mnemonicParsing="false" onAction="#registra" style="-fx-background-color: #dac7b1 #dac7b1; -fx-border-color: black;" text="Registrati" textFill="#68563e" />
+      <Button layoutX="130.0" layoutY="300.0" mnemonicParsing="false" onAction="#indietro" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: black;" text="Indietro" textFill="#68563e" />
+   </children>
+</AnchorPane>

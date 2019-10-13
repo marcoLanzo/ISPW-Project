@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_progetto_fersa" default="compile.module.progetto_fersa">
+  <dirname property="module.progetto_fersa.basedir" file="${ant.file.module_progetto_fersa}"/>
+  
+  <property name="module.jdk.home.progetto_fersa" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.progetto_fersa" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.progetto_fersa" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.progetto_fersa" value="-encoding UTF-8 -source 10 -target 10 ${compiler.args}"/>
+  
+  <property name="progetto_fersa.output.dir" value="${module.progetto_fersa.basedir}/out/production/progetto_fersa"/>
+  <property name="progetto_fersa.testoutput.dir" value="${module.progetto_fersa.basedir}/out/test/progetto_fersa"/>
+  
+  <path id="progetto_fersa.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="progetto_fersa.module.production.classpath">
+    <path refid="${module.jdk.classpath.progetto_fersa}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.postgresql-42.2.5.classpath"/>
+    <pathelement location="${basedir}/../../../apache-tomcat-9.0.4/lib/servlet-api.jar"/>
+  </path>
+  
+  <path id="progetto_fersa.runtime.production.module.classpath">
+    <pathelement location="${progetto_fersa.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.postgresql-42.2.5.classpath"/>
+    <pathelement location="${basedir}/../../../apache-tomcat-9.0.4/lib/servlet-api.jar"/>
+  </path>
+  
+  <path id="progetto_fersa.module.classpath">
+    <path refid="${module.jdk.classpath.progetto_fersa}"/>
+    <pathelement location="${progetto_fersa.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.postgresql-42.2.5.classpath"/>
+    <pathelement location="${basedir}/../../../apache-tomcat-9.0.4/lib/servlet-api.jar"/>
+  </path>
+  
+  <path id="progetto_fersa.runtime.module.classpath">
+    <pathelement location="${progetto_fersa.testoutput.dir}"/>
+    <pathelement location="${progetto_fersa.output.dir}"/>
+    <path refid="library.lib.classpath"/>
+    <path refid="library.postgresql-42.2.5.classpath"/>
+    <pathelement location="${basedir}/../../../apache-tomcat-9.0.4/lib/servlet-api.jar"/>
+  </path>
+  
+  
+  <patternset id="excluded.from.module.progetto_fersa">
+    <patternset refid="ignored.files"/>
+    <exclude name="out/**"/>
+    <exclude name="out/artifacts/**"/>
+    <exclude name="out/artifacts/progetto_fersa/**"/>
+    <exclude name="out/artifacts/progetto_fersa/bin/**"/>
+    <exclude name="out/artifacts/progetto_fersa/lib/**"/>
+    <exclude name="out/artifacts/progetto_fersa/conf/**"/>
+    <exclude name="out/artifacts/progetto_fersa/logs/**"/>
+    <exclude name="out/artifacts/progetto_fersa/temp/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/api/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/elapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/sample/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/sample/src/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/sample/src/mypackage/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/sample/web/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/sample/web/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/sample/web/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/appdev/sample/docs/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/config/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/images/fonts/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/jspapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/tribes/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/funcspecs/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/servletapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/architecture/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/architecture/startup/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/architecture/requestProcess/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/docs/websocketapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/ROOT/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/ROOT/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/manager/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/manager/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/manager/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/manager/WEB-INF/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/manager/META-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/cal/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/num/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/snp/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/xml/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsp2/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsp2/el/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsp2/jspx/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsp2/misc/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsp2/tagfiles/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsp2/simpletag/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsp2/jspattribute/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/async/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/dates/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/error/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/colors/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/plugin/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/plugin/applet/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/forward/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/include/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/checkbox/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/security/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/security/protected/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/sessions/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/jsptoserv/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/simpletag/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/jsp/tagplugin/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/jsp/applet/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/lib/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/jsp2/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/tags/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/cal/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/num/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/jsp2/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/jsp2/examples/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/jsp2/examples/el/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/jsp2/examples/simpletag/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/util/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/async/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/dates/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/error/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/http2/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/colors/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/filters/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/checkbox/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/examples/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/sessions/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/trailers/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/listeners/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/websocket/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/websocket/chat/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/websocket/echo/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/websocket/snake/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/websocket/drawboard/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/websocket/drawboard/wsmessages/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/validators/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/nonblocking/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/WEB-INF/classes/compressionFilters/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/servlets/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/servlets/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/servlets/nonblocking/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/examples/websocket/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/host-manager/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/host-manager/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/host-manager/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/host-manager/WEB-INF/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa/webapps/host-manager/META-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/bin/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/lib/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/Dao/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/res/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/res/immobili/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/View/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/View/.idea/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/Model/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/Exception/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/Controller/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/application/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/src/patternConnessione/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/web/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/web/css/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/web/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/conf/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/logs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/temp/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/.idea/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/.idea/artifacts/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/.idea/libraries/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/.idea/codeStyles/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/lib/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/bin/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/css/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/Dao/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/lib/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/out/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/out/artifacts/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/out/artifacts/progetto_fersa_war_exploded/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/out/production/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/out/production/progetto_fersa/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/res/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/res/immobili/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/src/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/src/res/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/src/res/immobili/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/src/View/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/src/View/.idea/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/web/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/web/css/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/web/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/View/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/View/.idea/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/conf/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/logs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/temp/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/.idea/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/.idea/artifacts/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/.idea/libraries/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/.idea/codeStyles/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/Model/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/api/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/elapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/appdev/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/appdev/sample/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/appdev/sample/web/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/appdev/sample/web/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/appdev/sample/web/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/appdev/sample/docs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/config/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/images/fonts/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/jspapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/tribes/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/funcspecs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/servletapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/architecture/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/architecture/startup/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/architecture/requestProcess/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/docs/websocketapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/ROOT/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/ROOT/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/manager/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/manager/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/manager/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/manager/WEB-INF/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/manager/META-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/host-manager/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/host-manager/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/host-manager/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/host-manager/WEB-INF/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/webapps/host-manager/META-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/META-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/Exception/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/mypackage/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/Controller/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/application/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/WEB-INF/classes/patternConnessione/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/api/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/elapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/sample/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/sample/src/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/sample/src/mypackage/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/sample/web/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/sample/web/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/sample/web/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/appdev/sample/docs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/config/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/images/fonts/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/jspapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/tribes/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/funcspecs/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/servletapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/architecture/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/architecture/startup/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/architecture/requestProcess/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/docs/websocketapi/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/ROOT/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/ROOT/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/manager/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/manager/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/manager/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/manager/WEB-INF/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/manager/META-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/host-manager/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/host-manager/images/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/host-manager/WEB-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/host-manager/WEB-INF/jsp/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/webapps/host-manager/META-INF/**"/>
+    <exclude name="out/artifacts/progetto_fersa_war_exploded/META-INF/**"/>
+    <exclude name="out/production/**"/>
+    <exclude name="out/production/progetto_fersa/**"/>
+    <exclude name="out/production/progetto_fersa/bin/**"/>
+    <exclude name="out/production/progetto_fersa/Dao/**"/>
+    <exclude name="out/production/progetto_fersa/lib/**"/>
+    <exclude name="out/production/progetto_fersa/res/**"/>
+    <exclude name="out/production/progetto_fersa/res/immobili/**"/>
+    <exclude name="out/production/progetto_fersa/src/**"/>
+    <exclude name="out/production/progetto_fersa/src/res/**"/>
+    <exclude name="out/production/progetto_fersa/src/res/immobili/**"/>
+    <exclude name="out/production/progetto_fersa/src/View/**"/>
+    <exclude name="out/production/progetto_fersa/src/View/.idea/**"/>
+    <exclude name="out/production/progetto_fersa/web/**"/>
+    <exclude name="out/production/progetto_fersa/web/css/**"/>
+    <exclude name="out/production/progetto_fersa/web/WEB-INF/**"/>
+    <exclude name="out/production/progetto_fersa/View/**"/>
+    <exclude name="out/production/progetto_fersa/View/.idea/**"/>
+    <exclude name="out/production/progetto_fersa/conf/**"/>
+    <exclude name="out/production/progetto_fersa/logs/**"/>
+    <exclude name="out/production/progetto_fersa/temp/**"/>
+    <exclude name="out/production/progetto_fersa/.idea/**"/>
+    <exclude name="out/production/progetto_fersa/.idea/artifacts/**"/>
+    <exclude name="out/production/progetto_fersa/.idea/libraries/**"/>
+    <exclude name="out/production/progetto_fersa/.idea/codeStyles/**"/>
+    <exclude name="out/production/progetto_fersa/Model/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/api/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/elapi/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/appdev/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/appdev/sample/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/appdev/sample/web/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/appdev/sample/web/images/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/appdev/sample/web/WEB-INF/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/appdev/sample/docs/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/config/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/images/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/images/fonts/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/jspapi/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/tribes/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/WEB-INF/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/funcspecs/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/servletapi/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/architecture/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/architecture/startup/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/architecture/requestProcess/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/docs/websocketapi/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/ROOT/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/ROOT/WEB-INF/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/manager/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/manager/images/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/manager/WEB-INF/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/manager/WEB-INF/jsp/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/manager/META-INF/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/host-manager/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/host-manager/images/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/host-manager/WEB-INF/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/host-manager/WEB-INF/jsp/**"/>
+    <exclude name="out/production/progetto_fersa/webapps/host-manager/META-INF/**"/>
+    <exclude name="out/production/progetto_fersa/META-INF/**"/>
+    <exclude name="out/production/progetto_fersa/Exception/**"/>
+    <exclude name="out/production/progetto_fersa/mypackage/**"/>
+    <exclude name="out/production/progetto_fersa/Controller/**"/>
+    <exclude name="out/production/progetto_fersa/application/**"/>
+    <exclude name="out/production/progetto_fersa/patternConnessione/**"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.progetto_fersa">
+    <patternset refid="excluded.from.module.progetto_fersa"/>
+  </patternset>
+  
+  <path id="progetto_fersa.module.sourcepath">
+    <dirset dir="${module.progetto_fersa.basedir}/../../Magistrale">
+      <include name="fersa-web/src"/>
+      <include name="fersa-web"/>
+    </dirset>
+  </path>
+  
+  
+  <target name="compile.module.progetto_fersa" depends="compile.module.progetto_fersa.production,compile.module.progetto_fersa.tests" description="Compile module progetto_fersa"/>
+  
+  <target name="compile.module.progetto_fersa.production" depends="register.custom.compilers" description="Compile module progetto_fersa; production classes">
+    <mkdir dir="${progetto_fersa.output.dir}"/>
+    <javac2 destdir="${progetto_fersa.output.dir}" debug="${compiler.debug}" nowarn="${compiler.generate.no.warnings}" memorymaximumsize="${compiler.max.memory}" fork="true" executable="${module.jdk.bin.progetto_fersa}/javac">
+      <compilerarg line="${compiler.args.progetto_fersa}"/>
+      <bootclasspath refid="progetto_fersa.module.bootclasspath"/>
+      <classpath refid="progetto_fersa.module.production.classpath"/>
+      <src refid="progetto_fersa.module.sourcepath"/>
+      <patternset refid="excluded.from.compilation.progetto_fersa"/>
+    </javac2>
+    
+    <copy todir="${progetto_fersa.output.dir}">
+      <fileset dir="${module.progetto_fersa.basedir}/src">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+      <fileset dir="${module.progetto_fersa.basedir}">
+        <patternset refid="compiler.resources"/>
+        <type type="file"/>
+      </fileset>
+    </copy>
+  </target>
+  
+  <target name="compile.module.progetto_fersa.tests" depends="register.custom.compilers,compile.module.progetto_fersa.production" description="compile module progetto_fersa; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.progetto_fersa" description="cleanup module">
+    <delete dir="${progetto_fersa.output.dir}"/>
+    <delete dir="${progetto_fersa.testoutput.dir}"/>
+  </target>
+</project>

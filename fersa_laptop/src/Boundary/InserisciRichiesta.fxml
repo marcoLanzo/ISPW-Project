@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="656.0" minWidth="415.0" prefHeight="656.0" prefWidth="415.0" style="-fx-background-color: #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c #d2b48c;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Boundary.InserisciRichiesta">
+    <children>
+        <Separator layoutX="1.0" layoutY="207.0" prefHeight="1.0" prefWidth="415.0" />
+        <Separator layoutY="46.0" prefHeight="3.0" prefWidth="415.0" />
+        <Text fill="#86634f" layoutX="89.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci la tua richiesta" textAlignment="CENTER" underline="true">
+            <font>
+                <Font name="Savoye LET Plain:1.0" size="40.0" />
+            </font></Text>
+        <Button fx:id="closeButton" layoutX="24.0" layoutY="612.0" mnemonicParsing="false" onAction="#chiudi" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: black;" text="INDIETRO" textFill="#68563e" />
+        <Button fx:id="confermaButton" layoutX="290.0" layoutY="612.0" mnemonicParsing="false" onAction="#conferma" prefHeight="28.0" prefWidth="104.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: black;" text="CONFERMA" textFill="#68563e" />
+        <TextField fx:id="citta" layoutX="160.0" layoutY="92.0" prefHeight="26.0" prefWidth="152.0" />
+        <Label layoutX="36.0" layoutY="97.0" text="Città:">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font></Label>
+      <TextArea fx:id="descrizione" layoutX="38.0" layoutY="497.0" prefHeight="99.0" prefWidth="339.0" promptText="Inserire informazioni aggiuntive" />
+      <Label layoutX="18.0" layoutY="131.0" prefHeight="18.0" prefWidth="69.0" text="Prezzo da:">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Label>
+      <Slider fx:id="sliderprezzomin" layoutX="88.0" layoutY="132.0" prefHeight="16.0" prefWidth="120.0" />
+        <CheckBox fx:id="frigorifero" layoutX="235.0" layoutY="245.0" mnemonicParsing="false" text="Frigorigero">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <CheckBox fx:id="macchinaGas" layoutX="235.0" layoutY="280.0" mnemonicParsing="false" text="Macchina del gas">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <CheckBox fx:id="wifi" layoutX="30.0" layoutY="315.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="82.0" text="WiFi">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <CheckBox fx:id="doccia" layoutX="30.0" layoutY="280.0" mnemonicParsing="false" text="Doccia">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <CheckBox fx:id="vasca" layoutX="30.0" layoutY="245.0" mnemonicParsing="false" prefWidth="82.0" text="Vasca">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <CheckBox fx:id="lavastoviglie" layoutX="235.0" layoutY="315.0" mnemonicParsing="false" text="Lavastoviglie">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <CheckBox fx:id="termostato" layoutX="30.0" layoutY="350.0" mnemonicParsing="false" text="Termostato">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <CheckBox fx:id="misuratore" layoutX="235.0" layoutY="350.0" mnemonicParsing="false" text="Misuratore Consumo">
+            <font>
+                <Font name="American Typewriter" size="13.0" />
+            </font></CheckBox>
+        <ComboBox fx:id="riscaldamentoComboBox" layoutX="298.0" layoutY="394.0" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: #68563e#68563e;" />
+        <ComboBox fx:id="gasComboBox" layoutX="67.0" layoutY="394.0" prefHeight="25.0" prefWidth="108.0" style="-fx-background-color: #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1 #dac7b1; -fx-border-color: #68563e#68563e;" />
+        <Separator layoutY="416.0" prefHeight="37.0" prefWidth="415.0" />
+      <RadioButton fx:id="stanza" layoutX="30.0" layoutY="183.0" mnemonicParsing="false" text="Stanza" />
+      <RadioButton fx:id="appartamento" layoutX="234.0" layoutY="183.0" mnemonicParsing="false" text="Appartamento" />
+      <Label layoutX="33.0" layoutY="400.0" text="Gas" />
+      <Label layoutX="197.0" layoutY="400.0" prefHeight="16.0" prefWidth="99.0" text="Riscaldamento" />
+      <Label layoutX="25.0" layoutY="218.0" text="Cerco Immobile con:" />
+      <TextField fx:id="postiLettoInput" layoutX="206.0" layoutY="452.0" prefHeight="26.0" prefWidth="137.0" promptText="Esempio:3" />
+      <Label layoutX="39.0" layoutY="447.0" prefHeight="37.0" prefWidth="176.0" text="N°Posti letto Desiderati:" />
+      <TextField fx:id="p1" layoutX="212.0" layoutY="132.0" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="16.0" prefWidth="69.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <Separator layoutX="1.0" layoutY="364.0" prefHeight="37.0" prefWidth="415.0" />
+      <Label layoutX="72.0" layoutY="152.0" prefHeight="18.0" prefWidth="24.0" text="a:">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Label>
+      <Slider fx:id="sliderprezzomax" layoutX="88.0" layoutY="153.0" prefHeight="16.0" prefWidth="120.0" />
+      <TextField fx:id="p2" layoutX="212.0" layoutY="153.0" minHeight="-Infinity" nodeOrientation="LEFT_TO_RIGHT" prefHeight="16.0" prefWidth="69.0">
+         <font>
+            <Font size="9.0" />
+         </font>
+      </TextField>
+      <Separator layoutY="168.0" prefHeight="18.0" prefWidth="415.0" />
+      <Separator layoutY="124.0" prefHeight="3.0" prefWidth="415.0" />
+      <TextField fx:id="nome_annuncio" layoutX="160.0" layoutY="55.0" prefHeight="26.0" prefWidth="152.0" />
+      <Label layoutX="36.0" layoutY="60.0" text="Nome annuncio:">
+         <font>
+            <Font name="American Typewriter" size="13.0" />
+         </font>
+      </Label>
+    </children>
+</AnchorPane>

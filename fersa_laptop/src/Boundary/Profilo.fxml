@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.Group?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<AnchorPane fx:id="profilePane" minHeight="800.0" minWidth="1400.0" prefHeight="800.0" prefWidth="1400.0" style="-fx-background-color: #d2b48c #d2b48c;" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Boundary.Profilo">
+   <children>
+      <BorderPane minHeight="800.0" minWidth="1400.0" prefHeight="800.0" prefWidth="1400.0">
+         <left>
+            <VBox alignment="TOP_CENTER" prefHeight="627.0" prefWidth="230.0" spacing="25.0" style="-fx-background-color: #3e2f1d;" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#displayRenterShowcase" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/annunci_locatori.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Annunci locatori" wrappingWidth="116.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <VBox.margin>
+                        <Insets top="26.0" />
+                     </VBox.margin>
+                     <padding>
+                        <Insets top="21.0" />
+                     </padding>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#displayTenantShowcase" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="36.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/annunci_locatari.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Annunci locatari" wrappingWidth="121.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cercaSuMappa" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="33.0" fitWidth="41.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/mappa.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Cerca tramite mappa" wrappingWidth="148.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cercaPerNome" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="32.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/cerca.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Cerca tramite nome" wrappingWidth="148.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button fx:id="inserisciAnnuncioBtn" mnemonicParsing="false" onAction="#inserisciAnnuncioLocatore" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/aggiungi_appartamento.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci appartamento" wrappingWidth="156.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#inserisciAnnuncioLocatario" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/aggiuni_richiesta.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Inserisci richiesta" wrappingWidth="147.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/heart_copy.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Preferiti" wrappingWidth="147.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="42.0" prefWidth="59.0" style="-fx-background-color: #291f13;" text=" ">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/utente.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Profilo" wrappingWidth="147.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" spacing="7.0">
+                     <children>
+                        <Text fill="#e1c8a9" strokeType="OUTSIDE" strokeWidth="0.0" text="Pubblica annuncio" textAlignment="RIGHT" wrappingWidth="159.52978515625">
+                           <font>
+                              <Font name="Optima Regular" size="16.0" />
+                           </font>
+                        </Text>
+                        <Button minWidth="40.0" mnemonicParsing="false" onAction="#inserisciAnnuncio" prefHeight="50.0" prefWidth="50.0" style="-fx-background-radius: 25; -fx-background-color: #291f13;">
+                           <font>
+                              <Font size="1.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets left="3.0" />
+                           </HBox.margin>
+                           <graphic>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../res/aggiungi.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets left="10.0" />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets top="40.0" />
+                     </padding>
+                  </HBox>
+               </children>
+            </VBox>
+         </left>
+         <opaqueInsets>
+            <Insets bottom="11.0" left="11.0" right="11.0" top="11.0" />
+         </opaqueInsets>
+         <center>
+            <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fx:id="imgUser" fitHeight="249.0" fitWidth="249.0" layoutX="391.0" layoutY="30.0" pickOnBounds="true" preserveRatio="true" style="-fx-blend-mode: overlay;" x="71.0">
+                     <image>
+                        <Image url="@../res/utente.png" />
+                     </image>
+                  </ImageView>
+                  <Group layoutX="536.0" layoutY="288.0">
+                     <children>
+                        <ImageView fx:id="imgStar1" fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar2" fitHeight="20.0" fitWidth="20.0" layoutX="21.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar3" fitHeight="20.0" fitWidth="20.0" layoutX="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar4" fitHeight="20.0" fitWidth="20.0" layoutX="63.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="imgStar5" fitHeight="20.0" fitWidth="20.0" layoutX="84.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/star.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Group>
+                  <Button layoutX="958.0" layoutY="556.0" mnemonicParsing="false" onAction="#logout" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: #291f13;" text=" ">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="82.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/logout.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="49.0" layoutY="556.0" mnemonicParsing="false" onAction="#showAppartamenti" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: #291f13;">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="82.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/appartamenti.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button layoutX="346.0" layoutY="556.0" mnemonicParsing="false" onAction="#displayHistorical" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: #291f13;" text=" ">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="82.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/appartamenti2.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="43.0" layoutY="526.0" text="Storico appartamenti">
+                     <font>
+                        <Font name="Optima Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="362.0" layoutY="525.0" text="Storico annunci">
+                     <font>
+                        <Font name="Optima Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="991.0" layoutY="526.0" text="Disconnetti">
+                     <font>
+                        <Font name="Optima Regular" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="658.0" layoutY="556.0" mnemonicParsing="false" onAction="#showAnnunciAttivi" prefHeight="101.0" prefWidth="165.0" style="-fx-background-color: #291f13;" text=" ">
+                     <font>
+                        <Font size="1.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="82.0" fitWidth="131.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../res/active_announce.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label layoutX="680.0" layoutY="526.0" text="Annunci attivi">
+                     <font>
+                        <Font name="Optima Regular" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <Pane prefHeight="100.0" prefWidth="1400.0" style="-fx-background-color: #3e2f1d;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="#e1c8a9" layoutY="81.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Fersa" wrappingWidth="253.19140625">
+                     <font>
+                        <Font name="Savoye LET Plain:1.0" size="76.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="textUtente" fill="#e1c8a9" layoutX="673.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Utente" textAlignment="CENTER" wrappingWidth="343.19647216796875" x="-30.0">
+                     <font>
+                        <Font name="Optima Regular" size="45.0" />
+                     </font>
+                  </Text>
+               </children>
+            </Pane>
+         </top>
+      </BorderPane>
+   </children>
+</AnchorPane>
