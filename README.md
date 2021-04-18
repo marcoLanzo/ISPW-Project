@@ -19,6 +19,7 @@ The patterns used into this project are:
 - The **Facade Pattern** to provide a unified interface to the set of interfaces in FERSA
 
 Severals specific Use Case have been created and divided between my team group.
+
 Furthermore through **JUnit** we've tested if everything works well.
 
 In this part I've developed a thread linked to the pattern observer which is able to send a asynchronous notification to a renter 
