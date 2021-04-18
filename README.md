@@ -22,7 +22,9 @@ Severals specific Use Cases have been created and divided within the working gro
 
 Furthermore through **JUnit** is tested if everything works well.
 
-In the application they have been developed several thread linked to the pattern observer which is able to send a asynchronous notification to the homeowner when a user adds their home to their favorites or sends a message to the owner.
+In the application they have been developed several thread:
+- the first linked to the pattern observer which is able to send an asynchronous notification to the homeowner when a user adds their home to their favourites or sends   a message to the owner.
+- the second is a demon thread which is are running back during the entire execution of the application. It is able to check through the all announcements stored on    the DB and to delete an announcement if being inactive for a certain time frame.
 
 There is a part regards of the JSP programming technology, which uses Java for the development of the presentation logic, according to the BCE pattern, of web applications while providing dynamic content in HTML format, markup language.
 
