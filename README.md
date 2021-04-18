@@ -22,8 +22,8 @@ Severals specific Use Case have been created and divided between my team group.
 
 Furthermore through **JUnit** we've tested if everything works well.
 
-In this part I've developed a thread linked to the pattern observer which is able to send a asynchronous notification to the homeowner when a user adds their home to their favorites or sends a message to the owner.
+Furthermore, I've developed a thread linked to the pattern observer which is able to send a asynchronous notification to the homeowner when a user adds their home to their favorites or sends a message to the owner.
 
-I chose to make the web part of the JSP programming technology, which uses Java for the development of the presentation logic, according to the BCE pattern, of web applications while providing dynamic content in HTML format, markup language.
+There is a part regards of the JSP programming technology, which uses Java for the development of the presentation logic, according to the BCE pattern, of web applications while providing dynamic content in HTML format, markup language.
 
 IntelliJ IDEA and Scene Builder have been used as IDEs in the development phase.
