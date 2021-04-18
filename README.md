@@ -8,6 +8,8 @@ The application should allow to the user to log in with the profiles of users:
 - Tenant;
 - Guest
 
+# Implementation Side
+
 The communication between application client and database is made with a JDBC approach.
 
 The patterns used into this project are:
